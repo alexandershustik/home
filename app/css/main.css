@@ -1,0 +1,85 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'regular';
+  src: url("../fonts/Calibri/Calibri.eot");
+  src: local("☺"), url("../fonts/Calibri/Calibri.woff") format("woff"), url("../fonts/Calibri/Calibri.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'bold';
+  src: url("../fonts/CalibriBold/CalibriBold.eot");
+  src: local("☺"), url("../fonts/CalibriBold/CalibriBold.woff") format("woff"), url("../fonts/CalibriBold/CalibriBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'light';
+  src: url("../fonts/CalibriLight/CalibriLight.eot");
+  src: local("☺"), url("../fonts/CalibriLight/CalibriLight.woff") format("woff"), url("../fonts/CalibriLight/CalibriLight.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+.sprite {
+  background-image: url(../img/spritesheet.png);
+  background-repeat: no-repeat;
+  display: block; }
+
+.sprite-advantages-icon {
+  width: 38px;
+  height: 60px;
+  background-position: -5px -5px; }
+
+.sprite-fb-icon {
+  width: 8px;
+  height: 16px;
+  background-position: -53px -5px; }
+
+.sprite-green-bottom-arrow {
+  width: 11px;
+  height: 18px;
+  background-position: -71px -5px; }
+
+.sprite-icon-phone {
+  width: 25px;
+  height: 24px;
+  background-position: -92px -5px; }
+
+.sprite-logo {
+  width: 70px;
+  height: 70px;
+  background-position: -127px -5px; }
+
+.sprite-vk-icon {
+  width: 21px;
+  height: 12px;
+  background-position: -207px -5px; }
+
+.sprite-white-bottom-arrow {
+  width: 11px;
+  height: 18px;
+  background-position: -238px -5px; }
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 1400px; }
+
+.slider {
+  height: 1300px;
+  background: #a88773; }
+
+.advantages {
+  height: 570px; }
+
+.projects {
+  height: 910px;
+  background: #6ab960; }
+
+.contacts {
+  height: 430px;
+  background: #aca2a6; }
+
+.footer {
+  height: 150px;
+  background: #a88773; }

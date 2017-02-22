@@ -1,0 +1,47 @@
+.sprite {
+    background-image: url(../img/spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-advantages-icon {
+    width: 38px;
+    height: 60px;
+    background-position: -5px -5px;
+}
+
+.sprite-fb-icon {
+    width: 8px;
+    height: 16px;
+    background-position: -53px -5px;
+}
+
+.sprite-green-bottom-arrow {
+    width: 11px;
+    height: 18px;
+    background-position: -71px -5px;
+}
+
+.sprite-icon-phone {
+    width: 25px;
+    height: 24px;
+    background-position: -92px -5px;
+}
+
+.sprite-logo {
+    width: 70px;
+    height: 70px;
+    background-position: -127px -5px;
+}
+
+.sprite-vk-icon {
+    width: 21px;
+    height: 12px;
+    background-position: -207px -5px;
+}
+
+.sprite-white-bottom-arrow {
+    width: 11px;
+    height: 18px;
+    background-position: -238px -5px;
+}
