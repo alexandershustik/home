@@ -6,10 +6,46 @@ head
 	title Home
 	link(rel="stylesheet", href="css/main.css")
 body
-	section.slider 1300
-	section.advantages 570
-	section.projects 910
-	section.contacts 430
-	section.footer 150
+	section.slider
+		.slides
+			img(src="img/slide1.jpg", alt="").active
+		.slider-body
+			.menu
+			.lead-text
+				p.slider-header
+					span home
+				|construct
+				p.slider-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, magnam iure maiores nostrum molestias autem. Ab praesentium deserunt delectus dolore ad consectetur possimus eius necessitatibus! Laborum, labore dolorum soluta vel.
+				button.btn-primary проекты домов
+		.slider-footer
+			p.like-header наши принципы
+			p.slider-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate sit hic molestiae eligendi rem maiores voluptatem odio, beatae pariatur expedita nobis saepe eveniet quo, perferendis quam ad commodi facilis aliquid. Distinctio debitis eum ipsa aspernatur corrupti amet non voluptates sit, deserunt possimus cum ad quam sequi sed neque mollitia beatae, laudantium eveniet labore! Porro dolore tempore a eos soluta numquam.
+	section.advantages
+		p.like-header.invert преймущества
+		.advantages-wrap
+			.item-wrap
+				img(src="", alt="")
+				p.item-head технический надзор
+				p.item-body контроль качества выполненых работ
+	section.projects
+		p.like-header проекты
+		.projects-wrap
+			.projects-row
+				.projects-col
+				.projects-col.invert
+			.projects-row
+				.projects-col.invert
+				.projects-col
+	section.contacts
+		.map
+		.contacts-body
+			.info
+			.form
+		.contacts-footer
+			button контакты
+			button обратная связь
+	section.footer
+		.links 1
+		.social 2
 script(src="js/libs.min.js")
 script(src="js/common.js")

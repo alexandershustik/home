@@ -4,6 +4,7 @@
 $accent: #6ab960
 $sub: #a88773
 $mite: #aca2a6
+$text: #ada2a6
 
 $tablet: 'only screen and (max-width: 1024px)'
 $mobile: 'only screen and (max-width: 767px)'
@@ -17,8 +18,8 @@ body
 	min-width: 1400px
 	//max-width: 1500px
 .slider
-	height: 1300px
 	background: $sub
+	position: relative
 .advantages
 	height: 570px
 .projects
@@ -30,3 +31,76 @@ body
 .footer
 	height: 150px
 	background: $sub
+.slides
+	width: 100%
+	height: 100%
+	position: absolute
+	top: 0
+	left: 0
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+.slider-body
+	height: 100vh
+	min-height: 700px
+	max-height: 800px
+	width: 960px
+	margin: 0 auto
+	position: relative
+	top: 0
+	left: 0
+.slider-footer
+	height: 500px
+	width: 100%
+	background: rgba( $sub, .8)
+	position: relative
+	top: 0
+	left: 0
+.menu
+	width: 100%
+	height: 70px
+	background: $accent
+.like-header
+	margin: 0
+	padding: 55px 0 100px
+	font-size: 50px
+	font-family: regular
+	color: #fff
+	text-align: center
+	text-transform: uppercase
+	position: relative
+	&:after
+		content: ""
+		position: absolute
+		left: 0
+		right: 0
+		margin: auto
+		bottom: 25px
+		background-image: url(../img/spritesheet.png)
+		background-repeat: no-repeat
+		display: block
+		width: 11px
+		height: 18px
+		background-position: -238px -5px
+	&.invert
+		color: $text
+		&:after
+			background-position: -71px -5px
+.slider-text, .advantages-wrap
+	width: 960px
+	margin: 0 auto
+.projects-wrap
+	width: 100%
+	height: 300px
+.projects-row
+	width: 100%
+	height: 150px
+	font-size: 0
+.projects-col
+	width: 50%
+	height: 150px
+	background: $accent
+	display: inline-block
+	&.invert
+		background: $sub
