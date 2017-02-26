@@ -8,13 +8,38 @@
 </head>
 <body>
   <section class="slider">
-    <div class="slides"><img src="img/slide1.jpg" alt="" class="active"/></div>
+    <div class="slides"><img src="img/slide1.jpg" alt="" data-slide="0" class="active"/><img src="img/slide2.jpg" alt="" data-slide="1"/><img src="img/slide3.jpg" alt="" data-slide="2"/></div>
     <div class="slider-body">
-      <div class="menu"></div>
-      <div class="lead-text">
-        <p class="slider-header"><span>home</span></p>construct
+      <div class="menu">
+        <div class="logo-wrap"><i class="sprite sprite-logo"></i></div>
+        <div class="list-wrap">
+          <ul>
+            <li><a href="#">о компании</a></li>
+            <li><a href="#">каталог домов</a></li>
+            <li><a href="#">галлерея</a></li>
+            <li><a href="#">новости</a></li>
+            <li><a href="#">контакты</a></li>
+            <li class="mod"><a href="#">акции</a></li>
+          </ul>
+        </div>
+        <div class="phone-wrap">
+          <p><a href="#">+7 (495) 764-32-87</a>ежедневно 09:00 - 21:00</p>
+        </div>
+      </div>
+      <div data-slide="0" class="lead-text active">
+        <p class="slider-header"><span>home</span>construct</p>
         <p class="slider-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, magnam iure maiores nostrum molestias autem. Ab praesentium deserunt delectus dolore ad consectetur possimus eius necessitatibus! Laborum, labore dolorum soluta vel.</p>
         <button class="btn-primary">проекты домов</button>
+      </div>
+      <div data-slide="1" class="lead-text">
+        <p class="slider-header"><span>home2</span>construct</p>
+        <p class="slider-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, magnam iure maiores nostrum molestias autem. Ab praesentium deserunt delectus dolore ad consectetur possimus eius necessitatibus! Laborum, labore dolorum soluta vel.</p>
+        <button class="btn-primary">проекты домов2</button>
+      </div>
+      <div data-slide="2" class="lead-text">
+        <p class="slider-header"><span>home3</span>construct</p>
+        <p class="slider-text"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, magnam iure maiores nostrum molestias autem. Ab praesentium deserunt delectus dolore ad consectetur possimus eius necessitatibus! Laborum, labore dolorum soluta vel.</p>
+        <button class="btn-primary">проекты домов3</button>
       </div>
     </div>
     <div class="slider-footer">
@@ -34,25 +59,31 @@
   <section class="projects">
     <p class="like-header">проекты</p>
     <div class="projects-wrap">
-      <div class="projects-row">
-        <div class="projects-col"></div>
-        <div class="projects-col invert"></div>
+      <div class="project-item">
+        <div class="top-left">1</div>
       </div>
-      <div class="projects-row">
-        <div class="projects-col invert"></div>
-        <div class="projects-col"></div>
+      <div class="project-item invert">
+        <div class="top-right">2</div>
+      </div>
+      <div class="project-item invert">
+        <div class="bottom-left">3</div>
+      </div>
+      <div class="project-item">
+        <div class="bottom-right">4</div>
       </div>
     </div>
   </section>
   <section class="contacts">
     <div class="map"></div>
-    <div class="contacts-body">
-      <div class="info"></div>
-      <div class="form"></div>
-    </div>
-    <div class="contacts-footer">
-      <button>контакты</button>
-      <button>обратная связь</button>
+    <div class="contact-wrap">
+      <div class="contacts-body">
+        <div class="info"></div>
+        <div class="form"></div>
+      </div>
+      <div class="contacts-footer">
+        <button>контакты</button>
+        <button>обратная связь</button>
+      </div>
     </div>
   </section>
   <section class="footer">

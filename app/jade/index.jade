@@ -8,15 +8,49 @@ head
 body
 	section.slider
 		.slides
-			img(src="img/slide1.jpg", alt="").active
+			img(src="img/slide1.jpg", alt="", data-slide="0").active
+			img(src="img/slide2.jpg", alt="", data-slide="1")
+			img(src="img/slide3.jpg", alt="", data-slide="2")
 		.slider-body
 			.menu
-			.lead-text
+				.logo-wrap
+					i.sprite.sprite-logo
+				.list-wrap
+					ul
+						li
+							a(href="#") о компании
+						li
+							a(href="#") каталог домов
+						li
+							a(href="#") галлерея
+						li
+							a(href="#") новости
+						li
+							a(href="#") контакты
+						li.mod
+							a(href="#") акции
+				.phone-wrap
+					p
+						a(href="#") +7 (495) 764-32-87
+						|ежедневно 09:00 - 21:00
+			.lead-text(data-slide="0").active
 				p.slider-header
 					span home
-				|construct
+					|construct
 				p.slider-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, magnam iure maiores nostrum molestias autem. Ab praesentium deserunt delectus dolore ad consectetur possimus eius necessitatibus! Laborum, labore dolorum soluta vel.
 				button.btn-primary проекты домов
+			.lead-text(data-slide="1")
+				p.slider-header
+					span home2
+					|construct
+				p.slider-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, magnam iure maiores nostrum molestias autem. Ab praesentium deserunt delectus dolore ad consectetur possimus eius necessitatibus! Laborum, labore dolorum soluta vel.
+				button.btn-primary проекты домов2
+			.lead-text(data-slide="2")
+				p.slider-header
+					span home3
+					|construct
+				p.slider-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, magnam iure maiores nostrum molestias autem. Ab praesentium deserunt delectus dolore ad consectetur possimus eius necessitatibus! Laborum, labore dolorum soluta vel.
+				button.btn-primary проекты домов3
 		.slider-footer
 			p.like-header наши принципы
 			p.slider-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate sit hic molestiae eligendi rem maiores voluptatem odio, beatae pariatur expedita nobis saepe eveniet quo, perferendis quam ad commodi facilis aliquid. Distinctio debitis eum ipsa aspernatur corrupti amet non voluptates sit, deserunt possimus cum ad quam sequi sed neque mollitia beatae, laudantium eveniet labore! Porro dolore tempore a eos soluta numquam.
@@ -30,20 +64,23 @@ body
 	section.projects
 		p.like-header проекты
 		.projects-wrap
-			.projects-row
-				.projects-col
-				.projects-col.invert
-			.projects-row
-				.projects-col.invert
-				.projects-col
+			.project-item
+				.top-left 1
+			.project-item.invert
+				.top-right 2
+			.project-item.invert
+				.bottom-left 3
+			.project-item
+				.bottom-right 4
 	section.contacts
 		.map
-		.contacts-body
-			.info
-			.form
-		.contacts-footer
-			button контакты
-			button обратная связь
+		.contact-wrap
+			.contacts-body
+				.info
+				.form
+			.contacts-footer
+				button контакты
+				button обратная связь
 	section.footer
 		.links 1
 		.social 2

@@ -5,6 +5,7 @@ $accent: #6ab960
 $sub: #a88773
 $mite: #aca2a6
 $text: #ada2a6
+$menu-color: #452725
 
 $tablet: 'only screen and (max-width: 1024px)'
 $mobile: 'only screen and (max-width: 767px)'
@@ -17,9 +18,11 @@ body
 	padding: 0
 	min-width: 1400px
 	//max-width: 1500px
+	font-family: regular
 .slider
 	background: $sub
 	position: relative
+	overflow: hidden
 .advantages
 	height: 570px
 .projects
@@ -28,6 +31,7 @@ body
 .contacts
 	height: 430px
 	background: $mite
+	font-size: 0
 .footer
 	height: 150px
 	background: $sub
@@ -41,6 +45,17 @@ body
 		width: 100%
 		height: 100%
 		object-fit: cover
+		position: absolute
+		top: 0
+		left: 100%
+		transition: 1s
+		z-index: -1
+		&.active
+			left: 0
+			z-index: 10
+		&.left
+			left: -100%
+			z-index: 0
 .slider-body
 	height: 100vh
 	min-height: 700px
@@ -50,6 +65,33 @@ body
 	position: relative
 	top: 0
 	left: 0
+	overflow: hidden
+	z-index: 11
+.lead-text
+	height: 100%
+	position: absolute
+	top: 300px
+	transition: 1s
+	z-index: -1
+	opacity: 0
+	text-align: center
+	&.active
+		left: 0
+		z-index: 10
+		opacity: 1
+	&.left
+		z-index: -1
+		opacity: 0
+.slider-header
+	color: #fff
+	font-size: 65px
+	font-family: bold
+	text-transform: uppercase
+	line-height: 65px
+	span
+		font-size: 50px
+		font-family: regular
+		display: block
 .slider-footer
 	height: 500px
 	width: 100%
@@ -57,10 +99,7 @@ body
 	position: relative
 	top: 0
 	left: 0
-.menu
-	width: 100%
-	height: 70px
-	background: $accent
+	z-index: 11
 .like-header
 	margin: 0
 	padding: 55px 0 100px
@@ -93,14 +132,167 @@ body
 .projects-wrap
 	width: 100%
 	height: 300px
-.projects-row
-	width: 100%
-	height: 150px
 	font-size: 0
-.projects-col
+	position: relative
+.project-item
 	width: 50%
 	height: 150px
-	background: $accent
 	display: inline-block
+	font-size: 16px
+	position: relative
+	background: $accent
 	&.invert
 		background: $sub
+.top-left
+	position: absolute
+	bottom: 0
+	right: 0
+.top-right
+	position: absolute
+	bottom: 0
+	left: 0
+.bottom-left
+	position: absolute
+	top: 0
+	right: 0
+.bottom-right
+	position: absolute
+	top: 0
+	left: 0
+.map
+	width: 50%
+	height: 100%
+	background: bisque
+	display: inline-block
+.contact-wrap
+	width: 50%
+	height: 100%
+	background: coral
+	display: inline-block
+	vertical-align: top
+.contacts-body
+	width: 100%
+	height: 70%
+	background: mediumaquamarine
+.contacts-footer
+	width: 100%
+	height: 30%
+	background: yellowgreen
+.menu
+	width: 100%
+	height: 70px
+	background: #fff
+	margin-top: 35px
+	font-size: 0
+.logo-wrap
+	display: inline-block
+	width: 70px
+	height: 70px
+.list-wrap
+	display: inline-flex
+	justify-content: center
+	align-items: center
+	height: 100%
+	vertical-align: top
+	font-size: 14px
+	ul
+		margin: 0
+		padding: 0
+		list-style-type: none
+		display: flex
+		justify-content: center
+		align-items: center
+	li
+		display: inline-block
+		margin: 0 15px
+		position: relative
+		&:first-child
+			margin-left: 30px
+		&:last-child
+			margin-right: 30px
+		&.mod
+			a	
+				font-family: arial
+				color: #fff
+				font-size: 14px
+				background: $sub
+				padding: 10px
+				transition: .2s
+				&:hover
+					background-color: $accent
+				&:after
+					content: none
+	a
+		font-family: bold
+		color: $menu-color
+		text-transform: uppercase
+		text-decoration: none
+		padding: 28px 0
+		transition: .2s
+		&:hover
+			color: $accent
+		&:after
+			content: ''
+			width: 0%
+			height: 3px
+			background-color: #fff
+			bottom: -26px
+			left: 0
+			position: absolute
+			transition: .2s
+		&:hover:after
+			content: ''
+			width: 100%
+			height: 3px
+			background-color: $accent
+			bottom: -26px
+			left: 0
+			position: absolute
+.phone-wrap
+	display: inline-flex
+	justify-content: center
+	align-items: center
+	height: 100%
+	vertical-align: top
+	font-size: 0	
+	color: #fff
+	background-color: $accent
+	padding: 20px 25px 20px 64px
+	box-sizing: border-box
+	float: right
+	p
+		margin: 0
+		padding: 0
+		line-height: 18px
+		position: relative
+		font-size: 14px
+		&:before
+			content: ''
+			background-image: url(../img/spritesheet.png)
+			background-repeat: no-repeat
+			display: block
+			width: 25px
+			height: 24px
+			background-position: -92px -5px
+			bottom: 0
+			top: 0
+			left: -43px
+			position: absolute
+			margin: auto
+	a
+		display: block
+		font-family: bold
+		color: #fff
+		text-decoration: none
+		transition: .2s
+		&:hover
+			color: $menu-color
+
+
+
+
+
+
+
+
+
