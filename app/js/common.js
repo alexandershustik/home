@@ -3,7 +3,7 @@
 var slideDomCount = $('.slides img').length;
 activeSlide = 0;
 
-//interval =  setInterval( changeSlide, 4000);
+interval =  setInterval( changeSlide, 4000);
 
 function changeSlide(){
 	slideDomEl = '.slides img[data-slide=' + activeSlide + ']';
@@ -39,3 +39,108 @@ $('.slider-arr-wrap.right').click(function(){
 	changeSlide();
 	interval =  setInterval( changeSlide, 4000);
 });
+
+// map
+
+function initMap() {
+	var map = new google.maps.Map(document.getElementById('map'), {
+		scrollwheel: false,
+		zoom: 12,
+		center: {lat: 55.718889, lng: 38.626745},
+		disableDefaultUI: true,
+		//scrollwheel: false,
+		//draggable: false,
+		panControl: false,
+		mapTypeControl: false,
+		streetViewControl: false,
+		zoomControl: true,
+		zoomControlOptions: {
+			position: google.maps.ControlPosition.LEFT_TOP
+		},
+	});
+
+	var styles = [
+	  {
+	    stylers: [
+	      { hue: "#8bd434" },
+	      { saturation: -60 }
+	    ]
+	  }
+	];
+
+	map.setOptions({styles: styles});
+
+	var mark = new google.maps.Marker({
+		position: {lat: 55.718889, lng: 38.626745},
+		map: map,
+		icon: 'img/map-marker.png'
+	});
+}
+
+//tabs
+$('ul.tabs__caption').on('click', 'li:not(.active)', function() {
+	$(this)
+		.addClass('active').siblings().removeClass('active')
+		.closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
+});
+
+//validation
+$patternName = /^[а-яА-ЯёЁa-zA-Z\s]+$/;
+$patternPhone = /^[0-9+]+$/;
+
+$feedbackName = $('.feedback-form .tabs-input[name="name"]');
+$feedbackPhone = $('.feedback-form .tabs-input[name="phone"]');
+$feedbackSubmit = $('.feedback-form .tabs-submit');
+
+$feedbackName.on('input', function(){
+	if($(this).val().search($patternName) != 0){
+		$(this).addClass('fail');
+		$(this).removeClass('success');
+		$feedbackSubmit.prop( "disabled", true );
+	}
+	else {
+		$(this).removeClass('fail');
+		$(this).addClass('success');
+		enableSubmit();
+	}
+});
+$feedbackPhone.on('input', function(){
+	if($(this).val().search($patternPhone) != 0){
+		$(this).addClass('fail');
+		$(this).removeClass('success');
+		$feedbackSubmit.prop( "disabled", true );
+	}
+	else {
+		$(this).removeClass('fail');
+		$(this).addClass('success');
+		enableSubmit();
+	}
+});
+function enableSubmit(){
+ 	if(
+ 		$feedbackName.hasClass('success') &&
+ 		$feedbackPhone.hasClass('success')
+ 	) $feedbackSubmit.prop( "disabled", false );
+ 	else $feedbackSubmit.prop( "disabled", true );
+}
+//ajax
+$(".feedback-form").submit(function() { //Change
+	var th = $(this);
+	$.ajax({
+		type: "get",
+		url: "http://localhost:3006/img/map-marker.png", //Change
+		data: th.serialize()
+	}).done(function() {
+		$(".feed-success-wrap").addClass('success');
+		setTimeout(function() {
+			// Done Functions
+			th.trigger("reset");
+			$(".feed-success-wrap").removeClass('success');
+		}, 1000);
+	});
+	return false;
+});
+$(".feed-success-wrap").click(function(){
+	$(this).removeClass('success');
+	$(".feedback-form").trigger("reset");
+})
