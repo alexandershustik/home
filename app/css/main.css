@@ -111,6 +111,42 @@ body {
       left: -100%;
       z-index: 0; }
 
+.slider-btn-wrap {
+  position: relative; }
+
+.slider-arr-wrap {
+  position: absolute;
+  background: #fff;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 10;
+  -webkit-transition: .2s;
+  transition: .2s; }
+  .slider-arr-wrap:hover {
+    background: #452725; }
+  .slider-arr-wrap i {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto; }
+  .slider-arr-wrap.left {
+    left: 35px; }
+    .slider-arr-wrap.left i {
+      -webkit-transform: rotate(90deg);
+          -ms-transform: rotate(90deg);
+              transform: rotate(90deg); }
+  .slider-arr-wrap.right {
+    right: 35px; }
+    .slider-arr-wrap.right i {
+      -webkit-transform: rotate(-90deg);
+          -ms-transform: rotate(-90deg);
+              transform: rotate(-90deg); }
+
 .slider-body {
   height: 100vh;
   min-height: 700px;
