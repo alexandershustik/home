@@ -3,7 +3,7 @@
 var slideDomCount = $('.slides img').length;
 activeSlide = 0;
 
-interval =  setInterval( changeSlide, 4000);
+//interval =  setInterval( changeSlide, 4000);
 
 function changeSlide(){
 	slideDomEl = '.slides img[data-slide=' + activeSlide + ']';

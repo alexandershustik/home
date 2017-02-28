@@ -63,16 +63,13 @@
 body {
   margin: 0;
   padding: 0;
-  min-width: 1400px;
+  min-width: 960px;
   font-family: regular; }
 
 .slider {
   background: #a88773;
   position: relative;
   overflow: hidden; }
-
-.advantages {
-  height: 570px; }
 
 .projects {
   height: 910px;
@@ -124,7 +121,8 @@ body {
   margin: auto;
   z-index: 10;
   -webkit-transition: .2s;
-  transition: .2s; }
+  transition: .2s;
+  cursor: pointer; }
   .slider-arr-wrap:hover {
     background: #452725; }
   .slider-arr-wrap i {
@@ -167,7 +165,11 @@ body {
   transition: 1s;
   z-index: -1;
   opacity: 0;
-  text-align: center; }
+  text-align: center;
+  width: 500px;
+  margin: auto;
+  left: 0;
+  right: 0; }
   .lead-text.active {
     left: 0;
     z-index: 10;
@@ -181,11 +183,35 @@ body {
   font-size: 65px;
   font-family: bold;
   text-transform: uppercase;
-  line-height: 65px; }
+  line-height: 50px;
+  margin: 0; }
   .slider-header span {
     font-size: 50px;
     font-family: regular;
     display: block; }
+
+.slider-text {
+  color: #fff;
+  font-size: 20px;
+  margin: 30px 0; }
+
+.btn {
+  font-size: 17px;
+  color: #fff;
+  border: 5px solid transparent;
+  background: none;
+  padding: 20px 30px;
+  text-transform: uppercase;
+  -webkit-transition: .2s;
+  transition: .2s;
+  cursor: pointer; }
+
+.btn-primary {
+  border-color: #6ab960;
+  background: rgba(69, 39, 37, 0.4); }
+  .btn-primary:hover {
+    background: #6ab960;
+    border-color: #fff; }
 
 .slider-footer {
   height: 500px;
@@ -198,7 +224,7 @@ body {
 
 .like-header {
   margin: 0;
-  padding: 55px 0 100px;
+  padding: 55px 0 80px;
   font-size: 50px;
   font-family: regular;
   color: #fff;
@@ -211,7 +237,7 @@ body {
     left: 0;
     right: 0;
     margin: auto;
-    bottom: 25px;
+    bottom: 35px;
     background-image: url(../img/spritesheet.png);
     background-repeat: no-repeat;
     display: block;
@@ -223,9 +249,52 @@ body {
     .like-header.invert:after {
       background-position: -71px -5px; }
 
-.slider-text, .advantages-wrap {
+.footer-text {
   width: 960px;
-  margin: 0 auto; }
+  color: #fff;
+  font-size: 20px;
+  margin: 0 auto 18px;
+  text-align: center; }
+
+.advantages-wrap {
+  width: 960px;
+  margin: 0 auto;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.item-wrap {
+  display: inline-block;
+  width: 300px;
+  margin: 0 auto;
+  text-align: left;
+  margin-bottom: 60px;
+  width: 270px; }
+  .item-wrap img {
+    float: left;
+    margin-right: 20px; }
+
+.item-text {
+  font-family: regular;
+  color: #ada2a6;
+  font-size: 14px; }
+  .item-text span {
+    font-family: bold;
+    font-size: 17px;
+    color: #a88773;
+    text-transform: uppercase;
+    display: block; }
 
 .projects-wrap {
   width: 100%;
@@ -235,13 +304,65 @@ body {
 
 .project-item {
   width: 50%;
-  height: 150px;
+  height: 300px;
   display: inline-block;
   font-size: 16px;
   position: relative;
-  background: #6ab960; }
+  background: #6ab960;
+  font-size: 0; }
   .project-item.invert {
     background: #a88773; }
+
+.proj-item-wrap {
+  position: relative; }
+
+.proj-text {
+  font-size: 14px;
+  position: absolute;
+  width: 120px;
+  padding-right: 20px;
+  left: -140px;
+  top: 40px;
+  color: #e4ffb9;
+  text-align: right; }
+  .proj-text span {
+    color: #fff;
+    font-size: 17px;
+    line-height: 20px;
+    display: block;
+    margin-bottom: 10px;
+    text-transform: uppercase; }
+  .proj-text a {
+    display: inline-block;
+    color: #e4ffb9;
+    -webkit-transition: .2s;
+    transition: .2s; }
+    .proj-text a:hover {
+      color: #452725; }
+
+.price-wrap {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  font-size: 14px;
+  background: #6ab960;
+  width: 185px;
+  height: 75px; }
+  .price-wrap.invert {
+    background: #805a44; }
+  .price-wrap p {
+    color: #fff;
+    font-size: 20px;
+    line-height: 27px;
+    position: absolute;
+    top: -9px;
+    left: 33px; }
+    .price-wrap p span {
+      color: #e4ffb9;
+      display: block;
+      font-size: 14px;
+      text-decoration: line-through; }
 
 .top-left {
   position: absolute;
