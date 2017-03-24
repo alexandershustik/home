@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+html(lang="ru")
+head
+	meta(charset="UTF-8")
+	meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+	title Home
+	link(rel="stylesheet", href="css/main.css")
+body
+	section.slider.sub-page
+		.menu.sub-menu
+			.logo-wrap
+				i.sprite.sprite-logo
+			.list-wrap
+				ul
+					li
+						a(href="#") о компании
+					li
+						a(href="#") каталог домов
+					li
+						a(href="#") галлерея
+					li
+						a(href="#") новости
+					li
+						a(href="#") контакты
+					li.mod
+						a(href="#") акции
+			.phone-wrap
+				p
+					a(href="#") +7 (495) 764-32-87
+					|ежедневно 09:00 - 21:00
+	section.news-inside
+		ul.breadcrumbs
+			li: a( href="#" ) главная
+			li: a( href="#" ) новости
+			li: a( href="#" ) облицовочные материалы
+		.news-inside-header облицовочные материалы
+		.news-inside-date 12.14.21
+		p On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection.
+		p At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores.
+		img(src="img/news-inside-img.jpg", alt="")
+		p But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.
+		p Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences.
+		p These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. 
+	section.projects
+		p.like-header проекты
+		.projects-wrap
+			.project-item
+				.top-left
+					.proj-item-wrap
+						.proj-text
+							span Проект Амароскон
+							strong 300 м&sup2;
+							|3 гостиные и 2 ванные комнаты
+							a(href="#") Подробнее
+						img(src="img/house-image.jpg", alt="")
+						.price-wrap
+							p 
+								span 3 700 000 ₽	
+								| 2 619 000 ₽
+			.project-item.invert
+				.top-right
+					.proj-item-wrap
+						.proj-text
+							span Проект Амароскон
+							strong 300 м&sup2;
+							|3 гостиные и 2 ванные комнаты
+							a(href="#") Подробнее
+						img(src="img/house-image2.jpg", alt="")
+						.price-wrap
+							p 
+								span 3 700 000 ₽	
+								| 2 619 000 ₽
+			.project-item.invert.bottom
+				.bottom-left
+					.proj-item-wrap
+						.proj-text
+							span Проект Амароскон
+							strong 300 м&sup2;
+							|3 гостиные и 2 ванные комнаты
+							a(href="#") Подробнее
+						img(src="img/house-image2.jpg", alt="")
+						.price-wrap
+							p 
+								span 3 700 000 ₽	
+								| 2 619 000 ₽
+			.project-item.bottom
+				.bottom-right
+					.proj-item-wrap
+						.proj-text
+							span Проект Амароскон
+							strong 300 м&sup2;
+							|3 гостиные и 2 ванные комнаты
+							a(href="#") Подробнее
+						img(src="img/house-image.jpg", alt="")
+						.price-wrap
+							p 
+								span 3 700 000 ₽	
+								| 2 619 000 ₽
+		.proj-btn-wrap
+			button.btn.btn-proj Все проекты
+	section.contacts
+		.map#map
+		.contact-wrap
+			.tabs
+				.tabs__content.active
+					p.tabs-header Контакты
+					p.tabs-text
+						span Адрес:
+						|Москва, ул. Поречная, д. 10, 3 этаж
+					p.tabs-text
+						span Телефон:
+						a(href="tel:+3234") +7 (499) 432-32-57
+					p.tabs-text
+						span E-mail:
+						a(href="mailto:d@f.r") kron@admin.com
+				.tabs__content
+					p.tabs-header Обратная связь
+					form.feedback-form
+						input.tabs-input(type="text" name="name" placeholder="Имя*")
+						input.tabs-input(type="text" name="phone" placeholder="Телефон*")
+						input.tabs-submit(type="submit" value="Оставить заявку" disabled="disabled")
+						.feed-success-wrap
+							p Заявка принята
+				ul.tabs__caption
+					li.active Контакты
+					li Обратная связь
+	section.footer
+		.links
+			p.links-header полезная информация
+			ul.links-ul
+				li
+					a(href="#") Выбор кровли: описание типов кровли и их преимущества
+				li
+					a(href="#") Как выбрать фундамент для возводимого дома
+				li
+					a(href="#") Выбор стенового материала для строительства дома
+			ul.links-ul
+				li
+					a(href="#") Планировка дома
+				li
+					a(href="#") Этапы работ
+				li
+					a(href="#") Ошибки при строительстве
+		.social
+			a(href="#").sprite-wrap.fb
+				i.sprite.sprite-fb-icon
+			a(href="#").sprite-wrap.vk
+				i.sprite.sprite-vk-icon
+			p.copyring Copyright ©  2017, «Крон»
+			p.copyring design by 
+				a(href="#") as-crew 
+				| / development by 
+				a(href="#") strikt
+script(src="js/libs.min.js")
+script(src="js/common.js")
+script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2fRMaJqOjBzaRu76T3hU0sBj9hVCBXEk&callback=initMap" async defer)

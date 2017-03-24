@@ -87,6 +87,7 @@ $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
 //validation
 $patternName = /^[а-яА-ЯёЁa-zA-Z\s]+$/;
 $patternPhone = /^[0-9+]+$/;
+$patternEmail = /[^\s]+[@][^\s]+/;
 
 $feedbackName = $('.feedback-form .tabs-input[name="name"]');
 $feedbackPhone = $('.feedback-form .tabs-input[name="phone"]');
@@ -116,12 +117,71 @@ $feedbackPhone.on('input', function(){
 		enableSubmit();
 	}
 });
+
+
+//validation popup
+
+$popupName = $('.popup-form .popup-input[name="name"]');
+$popupPhone = $('.popup-form .popup-input[name="phone"]');
+$popupEmail = $('.popup-form .popup-input[name="email"]');
+$popupSubmit = $('.popup-form .popup-submit');
+
+$popupName.on('input', function(){
+	if($(this).val().search($patternName) != 0){
+		$(this).addClass('fail');
+		$(this).removeClass('success');
+		$popupSubmit.prop( "disabled", true );
+	}
+	else {
+		$(this).removeClass('fail');
+		$(this).addClass('success');
+		enableSubmitPopup();
+	}
+});
+$popupPhone.on('input', function(){
+	if($(this).val().search($patternPhone) != 0){
+		$(this).addClass('fail');
+		$(this).removeClass('success');
+		$popupSubmit.prop( "disabled", true );
+	}
+	else {
+		$(this).removeClass('fail');
+		$(this).addClass('success');
+		enableSubmitPopup();
+	}
+});
+$popupEmail.on('input', function(){
+	if($(this).val().search($patternEmail) != 0){
+		$(this).addClass('fail');
+		$(this).removeClass('success');
+	}
+	else {
+		$(this).removeClass('fail');
+		$(this).addClass('success');
+		enableSubmitPopup();
+	}
+});
+
+
+
+
+
+
+
+
 function enableSubmit(){
  	if(
  		$feedbackName.hasClass('success') &&
  		$feedbackPhone.hasClass('success')
  	) $feedbackSubmit.prop( "disabled", false );
  	else $feedbackSubmit.prop( "disabled", true );
+}
+function enableSubmitPopup(){
+ 	if(
+ 		$popupName.hasClass('success') &&
+ 		$popupPhone.hasClass('success')
+ 	) $popupSubmit.prop( "disabled", false );
+ 	else $popupSubmit.prop( "disabled", true );
 }
 //ajax
 $(".feedback-form").submit(function() { //Change
@@ -144,3 +204,52 @@ $(".feed-success-wrap").click(function(){
 	$(this).removeClass('success');
 	$(".feedback-form").trigger("reset");
 })
+
+$(".popup-form").submit(function() { //Change
+	var th = $(this);
+	$.ajax({
+		type: "get",
+		url: "http://localhost:3006/img/map-marker.png", //Change
+		data: th.serialize()
+	}).done(function() {
+		$(".popup-success-wrap").addClass('success');
+		setTimeout(function() {
+			// Done Functions
+			th.trigger("reset");
+			$(".popup-success-wrap").removeClass('success');
+		}, 1000);
+	});
+	return false;
+});
+$(".feed-success-wrap").click(function(){
+	$(this).removeClass('success');
+	$(".feedback-form").trigger("reset");
+})
+
+//inside-slider
+$('.inside-slider').slick({
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	arrows: false,
+	fade: true,
+	asNavFor: '.inside-slider-nav'
+});
+$('.inside-slider-nav').slick({
+	slidesToShow: 5,
+	slidesToScroll: 1,
+	asNavFor: '.inside-slider',
+	dots: false,
+	centerMode: true,
+	focusOnSelect: true
+});
+
+//popup close btn
+
+$('.popup-wrap').click(function(){
+	$('.hidden').removeClass('open');
+})
+$('.btn.sbm-btn.sub').click(function(){
+	$('.hidden').addClass('open');
+})
+
+

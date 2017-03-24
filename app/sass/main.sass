@@ -13,12 +13,15 @@ $desctop: 'only screen and (max-width: 1440px)'
 $landscape: 'only screen and (orientation: landscape) and (max-width: 1024px)'
 $mobile-landscape: 'only screen and (orientation: landscape) and (max-width: 767px)'
 
-body
+*
+	margin: 0
+html, body
 	margin: 0
 	padding: 0
 	min-width: 960px
 	//max-width: 1500px
 	font-family: regular
+	position: relative
 .slider
 	background: $sub
 	position: relative
@@ -284,7 +287,7 @@ body
 			font-size: 20px
 			line-height: 27px
 			position: absolute
-			top: -9px
+			top: 9px
 			left: 33px
 			span
 				color: #e4ffb9
@@ -339,7 +342,7 @@ body
 			font-size: 20px
 			line-height: 27px
 			position: absolute
-			top: -13px
+			top: 7px
 			left: 33px
 			span
 				color: #e4ffb9
@@ -394,7 +397,7 @@ body
 			font-size: 20px
 			line-height: 27px
 			position: absolute
-			top: -13px
+			top: 4px
 			left: 33px
 			span
 				color: #e4ffb9
@@ -447,7 +450,7 @@ body
 			font-size: 20px
 			line-height: 27px
 			position: absolute
-			top: -9px
+			top: 7px
 			left: 33px
 			span
 				color: #e4ffb9
@@ -617,6 +620,7 @@ body
 	padding: 0
 	font-size: 50px
 	font-family: regular
+	color: #ada2a6
 .tabs-text
 	font-family: bold
 	font-size: 17px
@@ -767,4 +771,576 @@ body
 		transition: .2s
 		&:hover
 			color: $accent
+.sub-page
+	background: url(../img/bg.jpg) no-repeat center center
+	background-size: cover
+.sub-menu
+	width: 960px
+	margin: 35px auto 35px
+.about
+	width: 960px
+	margin: 0 auto 40px
+.sub-lead
+	text-align: left
+	padding: 0
+	margin: 55px 0
+	&:after
+		content: none
+.sub-desc
+	color: $sub
+	font-size: 17px
+	margin: 30px 0
+	text-transform: uppercase
+.news
+	width: 960px
+	margin: 0 auto 40px
+	hr
+		height: 1px
+		background: #e6dbdf
+		border: none
+		margin: 0
+.news-wrap
+	display: flex
+	flex-wrap: wrap
+	flex-direction: row
+	margin: 0
+	padding: 0
+	li
+		display: inline-block
+		width: 300px
+		margin-bottom: 70px
+		&:nth-child(2),&:nth-child(3n+2)
+			margin: 0 20px
+			
+.new-date
+	font-size: 14px
+	color: $sub
+	margin-bottom: 10px
+.new-header
+	margin: 20px 0
+	color: $sub
+	font-family: bold
+	font-size: 17px
+	text-transform: uppercase
+.new-desc
+	font-family: regular
+	font-size: 14px
+	color: #ada2a6
+	a
+		display: block
+		color: #ada2a6
+		transition: .2s
+		&:hover
+			color: $accent
+.news-pagination
+	margin: 50px 0 80px
+	padding: 0
+	list-style-type: none
+	text-align: center
+	li
+		display: inline-block
+		margin: 0 10px
+		a
+			color: $sub
+			font-family: bold
+			text-decoration: none
+			&:hover, &.active
+				color: $accent
 
+		.first
+			content: ''
+			background-image: url(../img/spritesheet.png) 
+			background-repeat: no-repeat
+			display: block
+			width: 25px
+			height: 24px
+			background-position: -58px -2px
+			margin: auto
+			transform: rotate(90deg)
+		.last
+			content: ''
+			background-image: url(../img/spritesheet.png) 
+			background-repeat: no-repeat
+			display: block
+			width: 25px
+			height: 24px
+			background-position: -70px -2px
+			margin: auto
+			transform: rotate(-90deg)
+.news-inside
+	width: 960px
+	margin: 0 auto 60px
+	p
+		margin: 40px 0
+	img
+		width: 530px
+		height: 330px
+		object-fit: cover
+		float: left
+		margin-right: 30px
+.breadcrumbs
+	margin: 40px 0
+	padding: 0
+	list-style-type: none
+	li
+		display: inline-block
+		margin-right: 30px
+		position: relative
+		&:after
+			content: '►'
+			font-size: 10px
+			color: $sub
+			position: absolute
+			right: -20px
+			top: 4px
+		&:last-child
+			&:after
+				content: none
+			a
+				cursor: default
+				color: $accent
+				&:hover
+					text-decoration: none
+		a
+			color: $sub
+			font-size: 12px
+			text-transform: uppercase
+			text-decoration: none
+			transition: .2s
+			&:hover
+				text-decoration: underline
+.news-inside-header
+	font-size: 17px
+	color: $sub
+	text-transform: uppercase
+.news-inside-date
+	margin: 40px 0 30px
+	color: $sub
+	font-size: 14px
+.catalog
+	width: 960px
+	margin: 0 auto 60px
+.search-head
+	border: 1px solid $sub
+	padding: 30px 50px
+	position: relative
+.options
+	width: 200px
+	display: inline-block
+	vertical-align: top
+	input[type=checkbox]
+		display: none
+	label
+		display: block
+		position: relative
+		padding-left: 20px
+		font-size: 16px
+		&:after
+			width: 15px
+			height: 15px
+			position: absolute
+			content: ''
+			left: -5px
+			top: 1px
+			border: 1px solid $sub
+	input[type=checkbox]:checked + label:before
+		content: '\2714'
+		position: absolute
+		font-size: 20px
+		top: -2px
+		left: -3px
+		color: $sub
+.opt-header
+	color: $sub
+	font-size: 17px
+	text-transform: uppercase
+	margin: 0
+.sbm-btn
+	color: $sub
+	border: 2px solid $sub
+	padding: 15px 35px
+	font-size: 14px
+	margin-top: 17px
+	margin-left: 80px
+	&:hover
+		background: $accent
+		color: #fff
+		border-color: #fff
+	&.sub
+		width: 100%
+		margin: 0
+		box-sizing: border-box
+		font-size: 12px
+		padding: 15px 35px 13px
+.page-wrap
+	min-height: 100%
+	margin-bottom: -150px
+	&:after
+		content: ''
+		display: block
+		height: 150px
+.sort-wrap
+	color: $accent
+	font-size: 12px
+	text-transform: uppercase
+	margin: 25px 0
+.sort-item
+	color: $sub
+	margin: 0 30px
+	text-decoration: none
+	position: relative
+	&:hover
+		text-decoration: underline
+	&.az
+		font-family: bold
+		pointer-events: none
+		&:hover
+			text-decoration: none
+		&:after
+			content: '\25BE'
+			position: absolute
+			font-size: 20px
+			top: -9px
+			right: -20px
+			color: $sub
+	&.za
+		font-family: bold
+		pointer-events: none
+		&:hover
+			text-decoration: none
+		&:after
+			content: '\25BE'
+			position: absolute
+			font-size: 20px
+			top: -7px
+			right: -20px
+			color: $sub
+			transform: rotate(180deg)
+.all-items
+	display: inline-block
+	float: right
+	span
+		font-family: bold
+.sort-res-wrap
+	margin: 0
+	padding: 0
+	list-style-type: none
+	display: flex
+	flex-wrap: wrap
+	flex-direction: row
+	li
+		display: inline-block
+		width: 300px
+		padding-bottom: 20px
+		position: relative
+		opacity: .7
+		transition: .2s
+		&:nth-child(2),&:nth-child(3n+2)
+			margin: 0 20px
+		&:hover
+			opacity: 1
+			background-color: #fdfdfd
+		a
+			text-decoration: none
+.sort-res-img
+	width: 100%
+.sale-ico
+	position: absolute
+	top: 0
+	left: 0
+	display: inline-block
+	font-family: bold
+	padding: 10px 15px
+	background-color: orange
+	color: #fff
+.sort-res-header
+	font-size: 17px
+	text-transform: uppercase
+	font-family: bold
+	color: $sub
+	margin: 15px 0
+.sort-res-desc
+	font-size: 16px
+	color: $text
+	margin: 20px 0
+.sort-res-price
+	color: $accent
+	font-size: 20px
+	margin: 20px 0
+	span
+		font-size: 14px
+		text-decoration: line-through
+		margin-right: 10px
+.sort-more
+	background-color: $accent
+	width: 100%
+	padding: 10px
+	border: none
+	font-family: bold
+	text-transform: uppercase
+	color: #fff
+	font-size: 20px
+	outline: none
+	cursor: pointer
+	transition: .2s
+	margin: 40px 0
+	&:hover
+		background-color: $sub
+.catalog-inside
+	width: 960px
+	margin: 0 auto 60px
+.slider-area
+	img
+		width: 100%
+		height: 400px
+		object-fit: cover
+.catalog-inside-wrap
+	margin-top: 30px
+	height: 100%
+.inside-slider-wrap
+	width: 700px
+	display: inline-block
+.inside-slider
+	img
+		width: 100%
+		height: 400px
+		object-fit: cover
+.inside-slider-nav
+	position: relative
+	margin-top: 15px
+	img
+		height: 60px
+		object-fit: cover
+	.slick-arrow
+		position: absolute
+		border: none
+		background-color: #aca2a6
+		width: 30px
+		height: 60px
+		top: 0
+		z-index: 1
+		font-size: 0
+		outline: none
+		transition: .2s
+		&:hover
+			background-color: #6ab960
+	.slick-prev
+		left: 0
+		&:before
+		    background: url(../img/spritesheet.png)
+		    width: 11px
+		    height: 18px
+		    background-position: -238px -5px
+		    background-repeat: no-repeat
+		    content: ''
+		    position: absolute
+		    transform: rotate(90deg)
+		    top: 23px
+		    left: 10px
+	.slick-next
+		right: 0
+		&:before
+		    background: url(../img/spritesheet.png)
+		    width: 11px
+		    height: 18px
+		    background-position: -238px -5px
+		    background-repeat: no-repeat
+		    content: ''
+		    position: absolute
+		    transform: rotate(-90deg)
+		    top: 23px
+		    left: 10px
+	.slick-slide
+		padding: 0 10px
+		box-sizing: border-box
+		outline: none
+.ins-desc-wrap
+	border: 1px solid #e6dbdf
+	display: inline-block
+	overflow: hidden
+	width: calc(100% - 720px)
+	float: right
+	padding: 30px
+	box-sizing: border-box
+.ins-desc-header
+	font-size: 17px
+	color: #ada2a6
+	text-transform: uppercase
+	line-height: 24px
+	font-family: bold
+.ins-desc-data
+	font-size: 16px
+	margin-bottom: 30px
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		top: 30px
+		left: 0
+		width: 100%
+		height: 1px
+		background-color: #e6dbdf
+	&.sub
+		font-size: 28px
+		font-family: bold
+		color: $accent
+		margin-bottom: 9px
+		&:after
+			content: none
+.plan-block
+	margin: 50px 0
+.plan-img
+	position: relative
+	display: inline-block
+	width: 240px
+	img
+		width: 240px
+		height: 240px
+	&:hover:after
+		content: ''
+		background: url(../img/zoom.png) no-repeat center center
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		height: 240px
+		width: 240px
+		background-color: rgba($sub,.4)
+.plan-text
+	display: inline-flex
+	width: 220px
+	height: 240px
+	vertical-align: top
+	align-items: center
+	flex-wrap: wrap
+	align-content: center
+	padding: 0 30px
+	box-sizing: border-box
+.plan-header
+	font-family: bold
+	font-size: 17px
+	color: $accent
+	text-transform: uppercase
+.plan-desc
+	margin: 10px 0 0
+.hidden
+	background-color: rgba(#e6dbdf,.8)
+	position: absolute
+	top: 0
+	bottom: 0
+	width: 100%
+	z-index: -1
+	opacity: 0
+	transition: .2s
+	&.open
+		opacity: 1
+		z-index: 1
+.popup-wrap
+	position: fixed
+	background-color: #FFF
+	top: 20%
+	left: 0
+	width: 500px
+	right: 0
+	margin: auto
+	padding: 60px
+	box-sizing: border-box
+	pointer-events: none
+	&:before
+		content: '✖'
+		position: absolute
+		top: 10px
+		right: 20px
+		font-size: 30px
+		color: #ada2a6
+		pointer-events: all
+		cursor: pointer
+.popup-header
+	color: #ada2a6
+	text-transform: uppercase
+	font-size: 30px
+.popup-form
+	position: relative
+	width: 100%
+.popup-input
+	text-transform: uppercase
+	display: block
+	font-family: bold
+	font-size: 14px
+	width: 100%
+	border: none
+	border-bottom: 1px solid #ada2a6
+	outline: none
+	color: $menu-color
+	margin: 0
+	margin-top: 10px
+	&::-webkit-input-placeholder
+		color: #ada2a6
+	&.success
+		color: $accent
+	&.fail
+		color: red
+.popup-area
+	text-transform: uppercase
+	display: block
+	font-family: bold
+	font-size: 14px
+	width: 100%
+	height: 100px
+	border: none
+	border-bottom: 1px solid #ada2a6
+	outline: none
+	color: $menu-color
+	margin-top: 10px
+	&::-webkit-input-placeholder
+		color: #ada2a6
+	&.success
+		color: $accent
+	&.fail
+		color: red
+.popup-submit
+	width: 200px
+	font-size: 14px
+	display: inline-block
+	text-align: center
+	background: #fff
+	transition: .2s
+	color: $accent
+	font-family: bold
+	text-transform: uppercase
+	padding: 21px 0
+	border: 2px solid $accent
+	margin-top: 25px
+	cursor: pointer
+	outline: none
+	&:hover
+		background: $sub
+		color: #fff
+		border: 2px solid #fff
+	&[disabled]
+		opacity: .5
+		&:hover
+			cursor: default
+			background: #fff
+			color: $accent
+			border: 2px solid $accent
+.popup-success-wrap
+	position: absolute
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	right: 0
+	left: 0
+	margin: auto
+	background: #fff
+	display: flex
+	justify-content: center
+	align-items: center
+	transition: .2s
+	z-index: -1
+	opacity: 0
+	&.success
+		z-index: 1
+		opacity: 1

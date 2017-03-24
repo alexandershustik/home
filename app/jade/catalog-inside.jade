@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+html(lang="ru")
+head
+	meta(charset="UTF-8")
+	meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+	title Home
+	link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css")
+	link(rel="stylesheet", href="css/main.css")
+body
+	section.slider.sub-page
+		.menu.sub-menu
+			.logo-wrap
+				i.sprite.sprite-logo
+			.list-wrap
+				ul
+					li
+						a(href="#") о компании
+					li
+						a(href="#") каталог домов
+					li
+						a(href="#") галлерея
+					li
+						a(href="#") новости
+					li
+						a(href="#") контакты
+					li.mod
+						a(href="#") акции
+			.phone-wrap
+				p
+					a(href="#") +7 (495) 764-32-87
+					|ежедневно 09:00 - 21:00
+	section.catalog-inside
+		ul.breadcrumbs
+			li: a(href="#") Каталог домов
+			li: a(href="#") деревянные дома
+			li: a(href="#") проект амараксон
+		.news-inside-header проект амараксон
+		.catalog-inside-wrap
+			.inside-slider-wrap
+				.inside-slider
+					img(src="http://placehold.it/1000/9c5461?text=slide1", alt="")
+					img(src="http://placehold.it/1000/9ca752?text=slide2", alt="")
+					img(src="http://placehold.it/1000/9cc243?text=slide3", alt="")
+					img(src="http://placehold.it/1000/9c5c34?text=slide4", alt="")
+					img(src="http://placehold.it/1000/9c8c25?text=slide5", alt="")
+					img(src="http://placehold.it/1000/9c2c16?text=slide6", alt="")
+				.inside-slider-nav
+					img(src="http://placehold.it/1000/9c5461?text=slide1", alt="")
+					img(src="http://placehold.it/1000/9ca752?text=slide2", alt="")
+					img(src="http://placehold.it/1000/9cc243?text=slide3", alt="")
+					img(src="http://placehold.it/1000/9c5c34?text=slide4", alt="")
+					img(src="http://placehold.it/1000/9c8c25?text=slide5", alt="")
+					img(src="http://placehold.it/1000/9c2c16?text=slide6", alt="")
+			.ins-desc-wrap
+				.ins-desc-header Общая площадь:
+				.ins-desc-data
+					span 245
+					| м
+					sup 2
+				.ins-desc-header Размеры:
+				.ins-desc-data
+					span 8 х 12
+					| м
+				.ins-desc-header Этажность:
+				.ins-desc-data
+					span Двухэтажный
+				.ins-desc-header Строительство:
+				.ins-desc-data
+					span 34
+					| дня
+				.ins-desc-header Цена:
+				.ins-desc-data.sub
+					span 2 233 123
+					| Р
+				.btn.sbm-btn.sub Оставить заявку
+		.plan-block
+			.plan-img
+				img(src="http://placehold.it/1000/daedae?text=first floor", alt="")
+			.plan-text
+				.plan-header Первый этаж
+				.plan-desc количество комнат 
+					span 6
+				.plan-desc количество санузлов 
+					span 6
+			.plan-img
+				img(src="http://placehold.it/1000/daeedd?text=second floor", alt="")
+			.plan-text
+				.plan-header Первый этаж
+				.plan-desc количество комнат
+					span 6
+				.plan-desc количество санузлов
+					span 6
+		p These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. 
+	section.projects
+		p.like-header проекты
+		.projects-wrap
+			.project-item
+				.top-left
+					.proj-item-wrap
+						.proj-text
+							span Проект Амароскон
+							strong 300 м&sup2;
+							|3 гостиные и 2 ванные комнаты
+							a(href="#") Подробнее
+						img(src="img/house-image.jpg", alt="")
+						.price-wrap
+							p 
+								span 3 700 000 ₽	
+								| 2 619 000 ₽
+			.project-item.invert
+				.top-right
+					.proj-item-wrap
+						.proj-text
+							span Проект Амароскон
+							strong 300 м&sup2;
+							|3 гостиные и 2 ванные комнаты
+							a(href="#") Подробнее
+						img(src="img/house-image2.jpg", alt="")
+						.price-wrap
+							p 
+								span 3 700 000 ₽	
+								| 2 619 000 ₽
+			.project-item.invert.bottom
+				.bottom-left
+					.proj-item-wrap
+						.proj-text
+							span Проект Амароскон
+							strong 300 м&sup2;
+							|3 гостиные и 2 ванные комнаты
+							a(href="#") Подробнее
+						img(src="img/house-image2.jpg", alt="")
+						.price-wrap
+							p 
+								span 3 700 000 ₽	
+								| 2 619 000 ₽
+			.project-item.bottom
+				.bottom-right
+					.proj-item-wrap
+						.proj-text
+							span Проект Амароскон
+							strong 300 м&sup2;
+							|3 гостиные и 2 ванные комнаты
+							a(href="#") Подробнее
+						img(src="img/house-image.jpg", alt="")
+						.price-wrap
+							p 
+								span 3 700 000 ₽	
+								| 2 619 000 ₽
+		.proj-btn-wrap
+			button.btn.btn-proj Все проекты
+	section.contacts
+		.map#map
+		.contact-wrap
+			.tabs
+				.tabs__content.active
+					p.tabs-header Контакты
+					p.tabs-text
+						span Адрес:
+						|Москва, ул. Поречная, д. 10, 3 этаж
+					p.tabs-text
+						span Телефон:
+						a(href="tel:+3234") +7 (499) 432-32-57
+					p.tabs-text
+						span E-mail:
+						a(href="mailto:d@f.r") kron@admin.com
+				.tabs__content
+					p.tabs-header Обратная связь
+					form.feedback-form
+						input.tabs-input(type="text" name="name" placeholder="Имя*")
+						input.tabs-input(type="text" name="phone" placeholder="Телефон*")
+						input.tabs-submit(type="submit" value="Оставить заявку" disabled="disabled")
+						.feed-success-wrap
+							p Заявка принята
+				ul.tabs__caption
+					li.active Контакты
+					li Обратная связь
+	section.footer
+		.links
+			p.links-header полезная информация
+			ul.links-ul
+				li
+					a(href="#") Выбор кровли: описание типов кровли и их преимущества
+				li
+					a(href="#") Как выбрать фундамент для возводимого дома
+				li
+					a(href="#") Выбор стенового материала для строительства дома
+			ul.links-ul
+				li
+					a(href="#") Планировка дома
+				li
+					a(href="#") Этапы работ
+				li
+					a(href="#") Ошибки при строительстве
+		.social
+			a(href="#").sprite-wrap.fb
+				i.sprite.sprite-fb-icon
+			a(href="#").sprite-wrap.vk
+				i.sprite.sprite-vk-icon
+			p.copyring Copyright ©  2017, «Крон»
+			p.copyring design by 
+				a(href="#") as-crew 
+				| / development by 
+				a(href="#") strikt
+	section.hidden
+		.popup-wrap
+			p.popup-header Оставить заявку
+			p.popup-desc  Lorem ipsum dolor sit amet, consectetur
+			form.popup-form
+				input.popup-input(type="text" name="name" placeholder="Имя*")
+				input.popup-input(type="text" name="phone" placeholder="Телефон*")
+				input.popup-input(type="text" name="email" placeholder="E-mail")
+				textarea.popup-area(name="message" placeholder="Сообщение")
+				input.popup-submit(type="submit" value="Оставить заявку" disabled="disabled")
+				.popup-success-wrap ваша заявка принята
+script(src="js/libs.min.js")
+script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2fRMaJqOjBzaRu76T3hU0sBj9hVCBXEk&callback=initMap" async defer)
+script(type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js")
+script(src="js/common.js")

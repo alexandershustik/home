@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+html(lang="ru")
+head
+	meta(charset="UTF-8")
+	meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+	title Home
+	link(rel="stylesheet", href="css/main.css")
+body
+	.page-wrap
+		section.slider.sub-page
+			.menu.sub-menu
+				.logo-wrap
+					i.sprite.sprite-logo
+				.list-wrap
+					ul
+						li
+							a(href="#") о компании
+						li
+							a(href="#") каталог домов
+						li
+							a(href="#") галлерея
+						li
+							a(href="#") новости
+						li
+							a(href="#") контакты
+						li.mod
+							a(href="#") акции
+				.phone-wrap
+					p
+						a(href="#") +7 (495) 764-32-87
+						|ежедневно 09:00 - 21:00
+		section.catalog
+			p.like-header.invert.sub-lead каталог домов
+			form(action="#").search-head
+				.options
+					p.opt-header тип строения
+					input(type="checkbox" name="struct" value="house" id="home")
+					label(for="home") дом
+					input(type="checkbox" name="struct" value="bath" id="bath")
+					label(for="bath") баня
+				.options
+					p.opt-header площадь
+					input(type="checkbox" name="area" value="100" id="100")
+					label(for="100") до 150
+					input(type="checkbox" name="area" value="150" id="150")
+					label(for="150") 150-250
+					input(type="checkbox" name="area" value="250" id="250")
+					label(for="250") свыше 250
+				.options
+					p.opt-header технология
+					input(type="checkbox" name="tech" value="tree" id="tree")
+					label(for="tree") деревянные
+					input(type="checkbox" name="tech" value="stone" id="stone")
+					label(for="stone") каменные
+					input(type="checkbox" name="tech" value="comb" id="comb")
+					label(for="comb") комбинированные
+				input(type="submit" value="подобрать").btn.sbm-btn
+			.sort-wrap сортировать по:
+				a(href="#").sort-item.az популярности
+				a(href="#").sort-item.za цене
+				a(href="#").sort-item площади
+				.all-items всего: 
+					span 23
+			ul.sort-res-wrap
+				li: a(href="#")
+					.sale-ico акция
+					img(src="img/news-inside-img.jpg", alt="").sort-res-img
+					.sort-res-header Проект амароскон 
+						span 270 
+						| м
+						sup 2
+					.sort-res-desc Технология:
+						span деревянная
+					.sort-res-price
+						span 3 000 000 ₽
+						|2 323 232 ₽
+				li: a(href="#")
+					img(src="img/news-inside-img.jpg", alt="").sort-res-img
+					.sort-res-header Проект амароскон 
+						span 270 
+						| м
+						sup 2
+					.sort-res-desc Технология:
+						span деревянная
+					.sort-res-price
+						span 3 000 000 ₽
+						|2 323 232 ₽
+				li: a(href="#")
+					img(src="img/news-inside-img.jpg", alt="").sort-res-img
+					.sort-res-header Проект амароскон 
+						span 270 
+						| м
+						sup 2
+					.sort-res-desc Технология:
+						span деревянная
+					.sort-res-price
+						span 3 000 000 ₽
+						|2 323 232 ₽
+				li: a(href="#")
+					img(src="img/news-inside-img.jpg", alt="").sort-res-img
+					.sort-res-header Проект амароскон 
+						span 270 
+						| м
+						sup 2
+					.sort-res-desc Технология:
+						span деревянная
+					.sort-res-price
+						span 3 000 000 ₽
+						|2 323 232 ₽
+				li: a(href="#")
+					img(src="img/news-inside-img.jpg", alt="").sort-res-img
+					.sort-res-header Проект амароскон 
+						span 270 
+						| м
+						sup 2
+					.sort-res-desc Технология:
+						span деревянная
+					.sort-res-price
+						span 3 000 000 ₽
+						|2 323 232 ₽
+			button.sort-more показать еще
+	section.footer
+		.links
+			p.links-header полезная информация
+			ul.links-ul
+				li
+					a(href="#") Выбор кровли: описание типов кровли и их преимущества
+				li
+					a(href="#") Как выбрать фундамент для возводимого дома
+				li
+					a(href="#") Выбор стенового материала для строительства дома
+			ul.links-ul
+				li
+					a(href="#") Планировка дома
+				li
+					a(href="#") Этапы работ
+				li
+					a(href="#") Ошибки при строительстве
+		.social
+			a(href="#").sprite-wrap.fb
+				i.sprite.sprite-fb-icon
+			a(href="#").sprite-wrap.vk
+				i.sprite.sprite-vk-icon
+			p.copyring Copyright ©  2017, «Крон»
+			p.copyring design by 
+				a(href="#") as-crew 
+				| / development by 
+				a(href="#") strikt
+script(src="js/libs.min.js")
+script(src="js/common.js")
