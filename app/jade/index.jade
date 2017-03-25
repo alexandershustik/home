@@ -6,11 +6,12 @@ head
 	title Home
 	link(rel="stylesheet", href="css/main.css")
 body
+	//большой слайдер
 	section.slider
 		.slides
-			img(src="img/slide1.jpg", alt="", data-slide="0").active
-			img(src="img/slide2.jpg", alt="", data-slide="1")
-			img(src="img/slide3.jpg", alt="", data-slide="2")
+			img(src="http://placehold.it/1000/7e0b39?text=main slide 1", alt="", data-slide="0").active
+			img(src="http://placehold.it/1000/0b7e6f?text=main slide 2", alt="", data-slide="1")
+			img(src="http://placehold.it/1000/7e370b?text=main slide 3", alt="", data-slide="2")
 		.slider-btn-wrap
 			.slider-arr-wrap.left
 				i.sprite.sprite-green-bottom-arrow
@@ -61,6 +62,9 @@ body
 			p.footer-text Строительство собственного дома — это очень сложный, но интересный процесс.
 			p.footer-text Если ты в курсе событий, видишь и участвуешь в каждом процессе - то постройка собственного дома приносит колоссальное удовлетворения от созданного практически собственными руками. Наша основная зада при строительстве сделать, так чтобы заказчик видел каждый процесс на 100% процентов, чтобы знал все нюансы собственного дома, чтобы участвовал сам в процессе постройки указывая на свои собственные желания.
 			p.footer-text Таким способом мы стараемся, не словом, а делом доказать и показать качество выполненных работ, провести работу над оптимизацией процесса для реальной экономии денег заказчика. В первую очередь мы работаем над репутацией нашей фирмы строя дома качественно, экологично и по разумным ценам.
+		.accent-header-wrap Заголовок
+			span Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, ex corporis perspiciatis explicabo commodi 
+	//преймущества		
 	section.advantages
 		p.like-header.invert преймущества
 		.advantages-wrap
@@ -94,6 +98,7 @@ body
 				p.item-text 
 					span Технический надзор
 					| Контроль качества выполненных работ
+	//проекты
 	section.projects
 		p.like-header проекты
 		.projects-wrap
@@ -151,6 +156,7 @@ body
 								| 2 619 000 ₽
 		.proj-btn-wrap
 			button.btn.btn-proj Все проекты
+	//контакты
 	section.contacts
 		.map#map
 		.contact-wrap
@@ -177,6 +183,7 @@ body
 				ul.tabs__caption
 					li.active Контакты
 					li Обратная связь
+	//подвал
 	section.footer
 		.links
 			p.links-header полезная информация

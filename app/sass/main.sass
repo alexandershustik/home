@@ -190,6 +190,11 @@ html, body
 		color: $text
 		&:after
 			background-position: -71px -5px
+	&.sub
+		text-align: left
+		padding: 0 0 50px
+		&:after
+			content: none
 .footer-text
 	width: 960px
 	color: #fff
@@ -469,6 +474,8 @@ html, body
 	height: 100%
 	background: bisque
 	display: inline-block
+	&.sub
+		width: 100%
 .menu
 	width: 100%
 	height: 70px
@@ -626,15 +633,20 @@ html, body
 	font-size: 17px
 	text-transform: uppercase
 	margin-bottom: 25px
+	color: #ada2a6
 	span
 		display: block
 		font-family: regular
 		font-size: 14px
+		text-transform: none
 	a
 		color: #ada2a6
 		transition: .2s
 		&:hover
 			color: $accent
+	i
+		font-style: normal
+		color: $accent
 .tabs-label
 	text-transform: uppercase
 	display: block
@@ -1193,6 +1205,7 @@ html, body
 	position: relative
 	display: inline-block
 	width: 240px
+	cursor: pointer
 	img
 		width: 240px
 		height: 240px
@@ -1247,6 +1260,12 @@ html, body
 	padding: 60px
 	box-sizing: border-box
 	pointer-events: none
+	z-index: -1
+	opacity: 0
+	transition: .2s
+	&.open
+		z-index: 1
+		opacity: 1
 	&:before
 		content: '✖'
 		position: absolute
@@ -1344,3 +1363,196 @@ html, body
 	&.success
 		z-index: 1
 		opacity: 1
+.popup-gal
+	position: fixed
+	background-color: #FFF
+	top: 10%
+	left: 0
+	bottom: 10%
+	width: 80%
+	height: 80%
+	right: 0
+	margin: auto
+	padding: 60px
+	box-sizing: border-box
+	pointer-events: none
+	z-index: -1
+	opacity: 0
+	transition: .2s
+	&.open
+		z-index: 1
+		opacity: 1
+	&:before
+		content: '✖'
+		position: absolute
+		top: 10px
+		right: 20px
+		font-size: 30px
+		color: #ada2a6
+		pointer-events: all
+		cursor: pointer
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+.contacts-inside
+	margin: 60px auto
+	width: 960px
+.row
+	display: flex
+	flex-wrap: wrap
+	justify-content: flex-start
+	&.sub
+		padding: 70px 0 130px
+.col-6
+	width: 50%
+	display: inline-block
+.contacts-form
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+.contacts-input
+	width: calc(50% - 30px)
+	box-sizing: border-box
+	border: none
+	border-bottom: 5px solid #aca2a6
+	text-transform: uppercase
+	font-size: 17px
+	font-family: bold
+	padding: 0 10px
+	outline: none
+	margin-bottom: 20px
+	color: #ada2a6
+	&::-webkit-input-placeholder
+		color: #ada2a6
+	&.success
+		color: $accent
+	&.fail
+		color: red
+.contacts-message
+	width: 100%
+	height: 100px
+	border: none
+	border-bottom: 5px solid #aca2a6
+	text-transform: uppercase
+	font-size: 17px
+	font-family: bold
+	padding: 0 10px
+	outline: none
+	margin-bottom: 20px
+	color: #ada2a6
+	&::-webkit-input-placeholder
+		color: #ada2a6
+.cont-btn-block
+	width: 100%
+	text-align: right
+.inputfile
+	width: 0.1px
+	height: 0.1px
+	opacity: 0
+	overflow: hidden
+	position: absolute
+	z-index: -1
+.inputfile + label
+	font-size: 17px
+	display: inline-block
+	font-family: bold
+	color: #ada2a6
+	transition: .2s
+	padding: 0 20px
+	text-transform: uppercase
+	position: relative
+	outline: none
+	&:before
+		content: ''
+		position: absolute
+		top: -2px
+		left: -5px
+		width: 20px
+		height: 20px
+		background: url(../img/file-before.png) no-repeat center center
+.inputfile:focus + label,
+.inputfile + label:hover
+	color: $accent
+	outline: none
+.inputfile + label
+	cursor: pointer /* "hand" cursor */
+.inputfile:focus + label
+	outline: 1px dotted #000
+	outline: -webkit-focus-ring-color auto 5px
+	outline: none
+.inputfile + label *
+	pointer-events: none
+	outline: none
+.contacts-submit
+	border: 5px solid #ada2a6
+	background: none
+	padding: 15px 20px
+	font-family: bold
+	font-size: 17px
+	color: #ada2a6
+	text-transform: uppercase
+	transition: .2s
+	&:hover
+		color: $accent
+		border-color: $accent
+	&[disabled]
+		opacity: .5
+		&:hover
+			cursor: default
+			color: #ada2a6
+			border-color: #ada2a6
+.accent-header-wrap
+	position: absolute
+	top: 125px
+	left: 758px
+	z-index: 10
+	width: 234px
+	background-color: #ffac08
+	color: #fff
+	font-size: 30px
+	font-family: bold
+	padding: 25px 25px
+	box-sizing: border-box
+	text-transform: uppercase
+	span
+		font-family: regular
+		font-size: 14px
+		margin-top: 10px
+		display: block
+		text-transform: none
+		text-decoration: underline
+.gallery
+	width: 960px
+	margin: 0 auto
+	display: flex
+	justify-content: center
+.gal-item
+	font-size: 0
+	position: relative
+	img
+		width: 100%
+		object-fit: cover
+		height: 535px
+.fake-btn
+	color: #fff
+	font-size: 17px
+	font-family: bold
+	border: 5px solid $accent
+	transition: .2s
+	position: absolute
+	text-decoration: none
+	text-transform: uppercase
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	margin: auto
+	padding: 10px
+	display: block
+	width: 80px
+	text-align: center
+	height: 20px
+	&:hover
+		text-decoration: none
+		background: $accent

@@ -7,6 +7,8 @@ head
 	link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css")
 	link(rel="stylesheet", href="css/main.css")
 body
+	//шапка и подвал отличаются
+	//внутреннее меню
 	section.slider.sub-page
 		.menu.sub-menu
 			.logo-wrap
@@ -29,12 +31,14 @@ body
 				p
 					a(href="#") +7 (495) 764-32-87
 					|ежедневно 09:00 - 21:00
+	//внутренний каталог
 	section.catalog-inside
 		ul.breadcrumbs
 			li: a(href="#") Каталог домов
 			li: a(href="#") деревянные дома
 			li: a(href="#") проект амараксон
 		.news-inside-header проект амараксон
+		//слайдер
 		.catalog-inside-wrap
 			.inside-slider-wrap
 				.inside-slider
@@ -72,7 +76,10 @@ body
 				.ins-desc-data.sub
 					span 2 233 123
 					| Р
+				// форма в скрытом блоке
 				.btn.sbm-btn.sub Оставить заявку
+		//поэтажный план
+		//картинки уходят в скрытый блок
 		.plan-block
 			.plan-img
 				img(src="http://placehold.it/1000/daedae?text=first floor", alt="")
@@ -91,6 +98,7 @@ body
 				.plan-desc количество санузлов
 					span 6
 		p These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. 
+	//проекты
 	section.projects
 		p.like-header проекты
 		.projects-wrap
@@ -148,6 +156,7 @@ body
 								| 2 619 000 ₽
 		.proj-btn-wrap
 			button.btn.btn-proj Все проекты
+	//контакты
 	section.contacts
 		.map#map
 		.contact-wrap
@@ -174,6 +183,7 @@ body
 				ul.tabs__caption
 					li.active Контакты
 					li Обратная связь
+	//подвал
 	section.footer
 		.links
 			p.links-header полезная информация
@@ -201,9 +211,10 @@ body
 				a(href="#") as-crew 
 				| / development by 
 				a(href="#") strikt
+	//скрытый блок
 	section.hidden
 		.popup-wrap
-			p.popup-header Оставить заявку
+			p.popup-header Оставить заявку 1
 			p.popup-desc  Lorem ipsum dolor sit amet, consectetur
 			form.popup-form
 				input.popup-input(type="text" name="name" placeholder="Имя*")
@@ -212,7 +223,10 @@ body
 				textarea.popup-area(name="message" placeholder="Сообщение")
 				input.popup-submit(type="submit" value="Оставить заявку" disabled="disabled")
 				.popup-success-wrap ваша заявка принята
+		.popup-gal
+			img
 script(src="js/libs.min.js")
 script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2fRMaJqOjBzaRu76T3hU0sBj9hVCBXEk&callback=initMap" async defer)
+//Этого скрипта нет на других страницах
 script(type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js")
 script(src="js/common.js")

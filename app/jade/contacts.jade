@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+html(lang="ru")
+head
+	meta(charset="UTF-8")
+	meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+	title Home
+	link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css")
+	link(rel="stylesheet", href="css/main.css")
+body
+	//внутреннее меню
+	section.slider.sub-page
+		.menu.sub-menu
+			.logo-wrap
+				i.sprite.sprite-logo
+			.list-wrap
+				ul
+					li
+						a(href="#") о компании
+					li
+						a(href="#") каталог домов
+					li
+						a(href="#") галлерея
+					li
+						a(href="#") новости
+					li
+						a(href="#") контакты
+					li.mod
+						a(href="#") акции
+			.phone-wrap
+				p
+					a(href="#") +7 (495) 764-32-87
+					|ежедневно 09:00 - 21:00
+	//другие контакты
+	section.contacts-inside
+		.row
+			.col-6
+				p.like-header.invert.sub Контакты
+				p.tabs-text
+					span Адрес:
+					|Москва, ул. Поречная, д. 10, 3 этаж
+				p.tabs-text
+					span Телефон:
+					a(href="tel:+3234") +7 (499) 432-32-57
+				p.tabs-text
+					span E-mail:
+					a(href="mailto:d@f.r") kron@admin.com
+				p.tabs-text
+					span режим работы:
+					| понедельник - пятница 
+					i c 9:00 - до 19:00
+			.col-6: .map.sub#map
+		.row.sub
+			.col-12
+				p.like-header.invert.sub Обратная связь
+				form.contacts-form
+					input.contacts-input(type="text" name="name" placeholder="Имя*")
+					input.contacts-input(type="text" name="email" placeholder="E-mail")
+					input.contacts-input(type="text" name="surname" placeholder="Фамилия")
+					input.contacts-input(type="text" name="phone" placeholder="Телефон*")
+					textarea.contacts-message(name="message" placeholder="Сообщение")
+					.cont-btn-block
+						input.inputfile(type="file" name="file" id="file" data-multiple-caption="Выбрано файлов {count}" multiple)
+						label(for="file")
+							span Выбрать файл(ы)
+						input.contacts-submit(type="submit" value="Отправить" disabled="disabled")
+	//проекты
+	section.projects
+		p.like-header проекты
+		.projects-wrap
+			.project-item
+				.top-left
+					.proj-item-wrap
+						.proj-text
+							span Проект Амароскон
+							strong 300 м&sup2;
+							|3 гостиные и 2 ванные комнаты
+							a(href="#") Подробнее
+						img(src="img/house-image.jpg", alt="")
+						.price-wrap
+							p 
+								span 3 700 000 ₽	
+								| 2 619 000 ₽
+			.project-item.invert
+				.top-right
+					.proj-item-wrap
+						.proj-text
+							span Проект Амароскон
+							strong 300 м&sup2;
+							|3 гостиные и 2 ванные комнаты
+							a(href="#") Подробнее
+						img(src="img/house-image2.jpg", alt="")
+						.price-wrap
+							p 
+								span 3 700 000 ₽	
+								| 2 619 000 ₽
+			.project-item.invert.bottom
+				.bottom-left
+					.proj-item-wrap
+						.proj-text
+							span Проект Амароскон
+							strong 300 м&sup2;
+							|3 гостиные и 2 ванные комнаты
+							a(href="#") Подробнее
+						img(src="img/house-image2.jpg", alt="")
+						.price-wrap
+							p 
+								span 3 700 000 ₽	
+								| 2 619 000 ₽
+			.project-item.bottom
+				.bottom-right
+					.proj-item-wrap
+						.proj-text
+							span Проект Амароскон
+							strong 300 м&sup2;
+							|3 гостиные и 2 ванные комнаты
+							a(href="#") Подробнее
+						img(src="img/house-image.jpg", alt="")
+						.price-wrap
+							p 
+								span 3 700 000 ₽	
+								| 2 619 000 ₽
+		.proj-btn-wrap
+			button.btn.btn-proj Все проекты
+	//подвал
+	section.footer
+		.links
+			p.links-header полезная информация
+			ul.links-ul
+				li
+					a(href="#") Выбор кровли: описание типов кровли и их преимущества
+				li
+					a(href="#") Как выбрать фундамент для возводимого дома
+				li
+					a(href="#") Выбор стенового материала для строительства дома
+			ul.links-ul
+				li
+					a(href="#") Планировка дома
+				li
+					a(href="#") Этапы работ
+				li
+					a(href="#") Ошибки при строительстве
+		.social
+			a(href="#").sprite-wrap.fb
+				i.sprite.sprite-fb-icon
+			a(href="#").sprite-wrap.vk
+				i.sprite.sprite-vk-icon
+			p.copyring Copyright ©  2017, «Крон»
+			p.copyring design by 
+				a(href="#") as-crew 
+				| / development by 
+				a(href="#") strikt
+	//скрытый блок
+	section.hidden
+script(src="js/libs.min.js")
+script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2fRMaJqOjBzaRu76T3hU0sBj9hVCBXEk&callback=initMap" async defer)
+script(src="js/common.js")

@@ -1,5 +1,26 @@
-//main-slider
+// chose file
+var inputs = document.querySelectorAll( '.inputfile' );
+Array.prototype.forEach.call( inputs, function( input )
+{
+	var label	 = input.nextElementSibling,
+		labelVal = label.innerHTML;
 
+	input.addEventListener( 'change', function( e )
+	{
+		var fileName = '';
+		if( this.files && this.files.length > 1 )
+			fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+		else
+			fileName = e.target.value.split( '\\' ).pop();
+
+		if( fileName )
+			label.querySelector( 'span' ).innerHTML = fileName;
+		else
+			label.innerHTML = labelVal;
+	});
+});
+
+//main-slider
 var slideDomCount = $('.slides img').length;
 activeSlide = 0;
 
@@ -162,13 +183,6 @@ $popupEmail.on('input', function(){
 	}
 });
 
-
-
-
-
-
-
-
 function enableSubmit(){
  	if(
  		$feedbackName.hasClass('success') &&
@@ -182,6 +196,44 @@ function enableSubmitPopup(){
  		$popupPhone.hasClass('success')
  	) $popupSubmit.prop( "disabled", false );
  	else $popupSubmit.prop( "disabled", true );
+}
+//validation contacts
+
+$contactsName = $('.contacts-form .contacts-input[name="name"]');
+$contactsPhone = $('.contacts-form .contacts-input[name="phone"]');
+$contactsSubmit = $('.contacts-form .contacts-submit');
+
+$contactsName.on('input', function(){
+	if($(this).val().search($patternName) != 0){
+		$(this).addClass('fail');
+		$(this).removeClass('success');
+		$contactsSubmit.prop( "disabled", true );
+	}
+	else {
+		$(this).removeClass('fail');
+		$(this).addClass('success');
+		enableContactsSubmit();
+	}
+});
+$contactsPhone.on('input', function(){
+	if($(this).val().search($patternPhone) != 0){
+		$(this).addClass('fail');
+		$(this).removeClass('success');
+		$contactsSubmit.prop( "disabled", true );
+	}
+	else {
+		$(this).removeClass('fail');
+		$(this).addClass('success');
+		enableContactsSubmit();
+	}
+});
+
+function enableContactsSubmit(){
+ 	if(
+ 		$contactsName.hasClass('success') &&
+ 		$contactsPhone.hasClass('success')
+ 	) $contactsSubmit.prop( "disabled", false );
+ 	else $contactsSubmit.prop( "disabled", true );
 }
 //ajax
 $(".feedback-form").submit(function() { //Change
@@ -227,29 +279,41 @@ $(".feed-success-wrap").click(function(){
 })
 
 //inside-slider
-$('.inside-slider').slick({
-	slidesToShow: 1,
-	slidesToScroll: 1,
-	arrows: false,
-	fade: true,
-	asNavFor: '.inside-slider-nav'
-});
-$('.inside-slider-nav').slick({
-	slidesToShow: 5,
-	slidesToScroll: 1,
-	asNavFor: '.inside-slider',
-	dots: false,
-	centerMode: true,
-	focusOnSelect: true
-});
+if($('.inside-slider').length > 0){
+	$('.inside-slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		asNavFor: '.inside-slider-nav'
+	});
+	$('.inside-slider-nav').slick({
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		asNavFor: '.inside-slider',
+		dots: false,
+		centerMode: true,
+		focusOnSelect: true
+	});
+}
 
 //popup close btn
 
 $('.popup-wrap').click(function(){
 	$('.hidden').removeClass('open');
+	$('.popup-wrap').removeClass('open');
 })
 $('.btn.sbm-btn.sub').click(function(){
 	$('.hidden').addClass('open');
+	$('.popup-wrap').addClass('open');
 })
-
-
+$('.popup-gal').click(function(){
+	$('.hidden').removeClass('open');
+	$('.popup-gal').removeClass('open');
+})
+$('.plan-img').click(function(){
+	$('.hidden').addClass('open');
+	$('.popup-gal').addClass('open');
+	console.log( $(this).find('img').attr('src') )
+	$('.popup-gal img').attr('src', $(this).find('img').attr('src'));
+})

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+html(lang="ru")
+head
+	meta(charset="UTF-8")
+	meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+	title Home
+	link(rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css")
+	link(rel="stylesheet", href="css/main.css")
+body
+	//внутреннее меню
+	section.slider.sub-page
+		.menu.sub-menu
+			.logo-wrap
+				i.sprite.sprite-logo
+			.list-wrap
+				ul
+					li
+						a(href="#") о компании
+					li
+						a(href="#") каталог домов
+					li
+						a(href="#") галлерея
+					li
+						a(href="#") новости
+					li
+						a(href="#") контакты
+					li.mod
+						a(href="#") акции
+			.phone-wrap
+				p
+					a(href="#") +7 (495) 764-32-87
+					|ежедневно 09:00 - 21:00
+	//блок галереии
+	section.gallery
+		
+	//проекты
+	section.projects
+		p.like-header проекты
+		.projects-wrap
+			.project-item
+				.top-left
+					.proj-item-wrap
+						.proj-text
+							span Проект Амароскон
+							strong 300 м&sup2;
+							|3 гостиные и 2 ванные комнаты
+							a(href="#") Подробнее
+						img(src="img/house-image.jpg", alt="")
+						.price-wrap
+							p 
+								span 3 700 000 ₽	
+								| 2 619 000 ₽
+			.project-item.invert
+				.top-right
+					.proj-item-wrap
+						.proj-text
+							span Проект Амароскон
+							strong 300 м&sup2;
+							|3 гостиные и 2 ванные комнаты
+							a(href="#") Подробнее
+						img(src="img/house-image2.jpg", alt="")
+						.price-wrap
+							p 
+								span 3 700 000 ₽	
+								| 2 619 000 ₽
+			.project-item.invert.bottom
+				.bottom-left
+					.proj-item-wrap
+						.proj-text
+							span Проект Амароскон
+							strong 300 м&sup2;
+							|3 гостиные и 2 ванные комнаты
+							a(href="#") Подробнее
+						img(src="img/house-image2.jpg", alt="")
+						.price-wrap
+							p 
+								span 3 700 000 ₽	
+								| 2 619 000 ₽
+			.project-item.bottom
+				.bottom-right
+					.proj-item-wrap
+						.proj-text
+							span Проект Амароскон
+							strong 300 м&sup2;
+							|3 гостиные и 2 ванные комнаты
+							a(href="#") Подробнее
+						img(src="img/house-image.jpg", alt="")
+						.price-wrap
+							p 
+								span 3 700 000 ₽	
+								| 2 619 000 ₽
+		.proj-btn-wrap
+			button.btn.btn-proj Все проекты
+	//подвал
+	section.footer
+		.links
+			p.links-header полезная информация
+			ul.links-ul
+				li
+					a(href="#") Выбор кровли: описание типов кровли и их преимущества
+				li
+					a(href="#") Как выбрать фундамент для возводимого дома
+				li
+					a(href="#") Выбор стенового материала для строительства дома
+			ul.links-ul
+				li
+					a(href="#") Планировка дома
+				li
+					a(href="#") Этапы работ
+				li
+					a(href="#") Ошибки при строительстве
+		.social
+			a(href="#").sprite-wrap.fb
+				i.sprite.sprite-fb-icon
+			a(href="#").sprite-wrap.vk
+				i.sprite.sprite-vk-icon
+			p.copyring Copyright ©  2017, «Крон»
+			p.copyring design by 
+				a(href="#") as-crew 
+				| / development by 
+				a(href="#") strikt
+	//скрытый блок
+	section.hidden
+script(src="js/libs.min.js")
+script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2fRMaJqOjBzaRu76T3hU0sBj9hVCBXEk&callback=initMap" async defer)
+script(src="js/common.js")
